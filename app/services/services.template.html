@@ -1,0 +1,13 @@
+<h1>Services</h1>
+<table class="services">
+    <tr ng-repeat="service in $ctrl.services" class="service-item">
+        <th>{{service.name}}</th>
+        <th>{{service.currency}}</th>
+        <th>{{service.price}}</th>
+    </tr>
+    <tr class="service-total">
+        <th>Total:</th>
+        <th>$</th>
+        <th>?</th>
+    </tr>
+</table>
