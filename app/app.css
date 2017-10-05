@@ -1,8 +1,4 @@
-body {
+.app-body {
     padding: 20px;
-    background-color: lightblue;
-}
-
-.service-total {
-    background-color: gray;
+    background-color: #bdcbc5;
 }

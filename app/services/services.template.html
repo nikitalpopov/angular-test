@@ -1,13 +1,18 @@
 <h1>Services</h1>
-<table class="services">
-    <tr ng-repeat="service in $ctrl.services" class="service-item">
+<table class="services table table-hover">
+    <tr
+        ng-repeat="service in $ctrl.services"
+        class="service-item"
+        ng-class="{'success' : service.isChosen, 'danger' : !service.isChosen}"
+        ng-click="$ctrl.updateTotal(service)"
+    >
         <th>{{service.name}}</th>
         <th>{{service.currency}}</th>
         <th>{{service.price}}</th>
     </tr>
-    <tr class="service-total">
+    <tr class="service-total info">
         <th>Total:</th>
         <th>$</th>
-        <th>?</th>
+        <th>{{$ctrl.total}}</th>
     </tr>
 </table>
