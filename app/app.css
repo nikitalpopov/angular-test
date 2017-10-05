@@ -2,3 +2,8 @@
     padding: 20px;
     background-color: #bdcbc5;
 }
+
+.table-fit {
+    width: auto !important;
+    margin: 0px auto;
+}
