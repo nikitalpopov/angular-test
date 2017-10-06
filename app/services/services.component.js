@@ -42,5 +42,15 @@ component('services', {
                 self.total -= service.price;
         };
 
+        self.addService = function addService(name, price) {
+            const service = {
+                name: name,
+                currency: '$',
+                price: parseFloat(price),
+                isChosen: false
+            };
+            self.services.push(service);
+        }
+
     }
 });

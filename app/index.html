@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <title>Services</title>
 
-    <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Manuale" rel="stylesheet">
+    <link rel="stylesheet" href="app.css" />
 
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
@@ -16,13 +18,19 @@
 
 <body>
 
-    <div class="app-body">
-        <div class="view-container">
-            <div ng-view class="view-frame">
-                <services class="text-center"></services>
-            </div>
+    <div class="jumbotron text-center">
+        <h1><span class="glyphicon glyphicon-yen small" aria-hidden="true"></span> Services</h1>
+        <p>calculate your expenses</p>
+        <p><a class="btn btn-primary btn-lg" ng-click="services = !services" role="button">Show</a></p>
+    </div>
+    <div class="view-container" ng-show="services">
+        <div ng-view class="view-frame">
+            <services class="text-center"></services>
         </div>
     </div>
+    <footer class="footer">
+        <div class="text-center">2017</div>
+    </footer>
 
 </body>
 </html>
