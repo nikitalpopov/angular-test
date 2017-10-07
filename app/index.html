@@ -17,14 +17,16 @@
 </head>
 
 <body>
-
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-brand">Test</div>
+    </nav>
     <div class="jumbotron text-center">
         <h1><span class="glyphicon glyphicon-yen small" aria-hidden="true"></span> Services</h1>
         <p>calculate your expenses</p>
         <p><a class="btn btn-primary btn-lg" ng-click="services = !services" role="button">Show</a></p>
     </div>
-    <div class="view-container" ng-show="services">
-        <div ng-view class="view-frame">
+    <div class="view-container">
+        <div ng-view class="view-frame" ng-show="services">
             <services class="text-center"></services>
         </div>
     </div>

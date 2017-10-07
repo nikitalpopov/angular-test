@@ -43,13 +43,15 @@ component('services', {
         };
 
         self.addService = function addService(name, price) {
-            const service = {
-                name: name,
-                currency: '$',
-                price: parseFloat(price),
-                isChosen: false
-            };
-            self.services.push(service);
+            if (!!parseFloat(price)) {
+                const service = {
+                    name: name,
+                    currency: '$',
+                    price: parseFloat(price),
+                    isChosen: false
+                };
+                self.services.push(service);
+            }
         }
 
     }
